@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class IndexController extends AbstractController{
    #[Route(path: '/index/{name}',name: 'app_index')] 
-   public function index(): Response{
+   public function index(string $name= "Anonymous"): Response{
     return new Response(content : "Hello" .$name . "!");
    }
 }
