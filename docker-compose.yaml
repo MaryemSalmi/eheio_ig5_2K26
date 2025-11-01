@@ -10,7 +10,7 @@ services:
     working_dir: /var/www/html
     command: php -S 0.0.0.0:8000 -t public
     ports:
-      - "8000:8000"
+      - "8001:8001"
     networks:
       - eheio-network
 
