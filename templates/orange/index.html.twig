@@ -3,10 +3,7 @@
 {% block title %}Hello OrangeController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+
 
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
@@ -17,4 +14,17 @@
         <li>Your template at <code>/home/sqli/eheio_ig5_2K26/templates/orange/index.html.twig</code></li>
     </ul>
 </div>
+{{parent()}}
 {% endblock %}
+{% block stylesheets %}
+
+
+        {% endblock %}
+{{parent()}}
+ {% block javascripts %}
+<script>
+alert("Hello from index.html.twig")
+</script>
+           
+        {% endblock %}
+{#npm run watch = se lance une seule fois quand il y a des modifications // npm run dev = se lance à chque fois quand on change quelque chose }
