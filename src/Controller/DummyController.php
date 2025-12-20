@@ -6,9 +6,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 class IndexController extends AbstractController{
-   #[Route(path: '/dummy/{name}',name: 'app_dummy')] 
-   public function index(string $name): Response{
-    return $this->render(view: 'dummy/index.html.twig',parameters:['name'=>$name]) ;
+   #[Route(path: '/add-book',name: 'app_book_add')] 
+   public function addBook(): Response{
+      $book = new Book();
+      $bookForm = $this->createForm(type: BookType::class, data: $book);
+    return $this->render(view: 'dummy/index.html.twig',parameters:[
+      "bookForm" => $bookForm
+    ]) ;
    }
 }
 

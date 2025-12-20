@@ -8,3 +8,9 @@ index:
     controller: App\Controller\IndexController::index
     requirements:
         name: '\d+'
+twig:
+    file_name_pattern: '*.twig'
+    form_themes: ['bootstrap_5_layout.html.twig']
+when@test:
+    twig:
+        strict_variables: true
