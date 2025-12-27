@@ -10,7 +10,7 @@ class IndexController extends AbstractController{
    public function addBook(): Response{
       $book = new Book();
       $bookForm = $this->createForm(type: BookType::class, data: $book);
-    return $this->render(view: 'dummy/index.html.twig',parameters:[
+    return $this->render(view: 'orange/index.html.twig',parameters:[
       "bookForm" => $bookForm
     ]) ;
    }
